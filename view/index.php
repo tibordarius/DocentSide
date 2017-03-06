@@ -4,7 +4,7 @@
     if (!($_SESSION['loggedIn'])){
         header('location:signin.html');
         exit();}
-    else{
+    if ($_SESSION['LoggedIn']){
         header('location:dashboard.html');
         exit();}
 ?>
