@@ -7,7 +7,7 @@ and open the template in the editor.
 <?php
     session_start();
     if (!($_SESSION['loggedIn'])){
-    header('location:./view/singin.html');
+    header('location:./view/signin.html');
     exit();}
 ?>
 <html>
