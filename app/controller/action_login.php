@@ -1,12 +1,12 @@
 <?php
-                $servername = DB_HOST;
-                $username_database = DB_USERNAME;
-                $password_database = DB_PASSWORD;
+                $servername = 'oege.ie.hva.nl';
+                $username_database = 'artsn001';
+                $password_database = '7L1fsVAUG5KngR';
 
                 $conn = new mysqli($servername, $username_database, $password_database);
                 
-$username_form = $_POST['inputEmail'];
-$password_form = $_POST['inputPassword'];
+$username_form = $_POST['uname'];
+$password_form = $_POST['psw'];
 $timestamp = date('Y-m-d G:i:s');
 
 $query = $conn->prepare("SELECT password FROM zartsn001.employee WHERE username = ?");
@@ -30,7 +30,7 @@ if ($password_form == $password) {
     
     echo "succed INSERT";
     
-    header('location:../view/index.php');
+    header('location:https://oege.ie.hva.nl/~artsn001/DocentSide/view/index.php ');
     exit();
 } else {
     echo "ERROR";
