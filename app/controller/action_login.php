@@ -30,7 +30,7 @@ if ($password_form == $password) {
     
     echo "succed INSERT";
     
-    header('location:https://oege.ie.hva.nl/~artsn001/DocentSide/view/dashboard.php ');
+    header('location:https://oege.ie.hva.nl/~artsn001/DocentSide/view/dashboard.html');
     exit();
 } else {
     echo "ERROR";
