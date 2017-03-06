@@ -2,7 +2,7 @@
     include_once '../config/config.php';
     session_start();
     if (!($_SESSION['loggedIn'])){
-        header('location:signin.html');
+        header('location:signin.php');
         exit();}
     if ($_SESSION['LoggedIn']){
         header('location:dashboard.html');

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -7,6 +7,12 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="google-signin-client_id" content="386290369432-apops34elv931sovs3demr1r8dmprru1.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!-- gapi.load('auth2', function(){
+       gapi.auth2.init();
+    }); -->
+    
     <link rel="icon" href="../../favicon.ico">
 
     <title>Signin Template for Bootstrap</title>
@@ -40,6 +46,7 @@
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name="psw">
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <div class="g-signin2" position="center" padding="10px" data-onsuccess="onSignIn"></div>
       </form>
 
     </div> <!-- /container -->
