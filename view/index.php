@@ -2,8 +2,11 @@
     include_once '../config/config.php';
     session_start();
     if (!($_SESSION['loggedIn'])){
-    header('location:signin.html');
-    exit();}
+        header('location:signin.html');
+        exit();}
+    else{
+        header('location:dashboard.html');
+        exit();}
 ?>
 <!DOCTYPE html>
 <html lang="en">
