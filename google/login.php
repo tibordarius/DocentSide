@@ -65,10 +65,11 @@ if ($success) {
       $_SESSION["new_user"] = "no";
     } else {
       // New user, Insert in database
-      $sql = "INSERT INTO `google_users` (`name`, `email`) VALUES " . "( :name, :email)";
+      $sql = "INSERT INTO `google_users` (`name`, `email`, `given_name`) VALUES " . "( :name, :email, :given_name)";
       $stmt = $DB->prepare($sql);
       $stmt->bindValue(":name", $user->name);
       $stmt->bindValue(":email", $user->email);  
+      $stmt->bindValue(":given_name", $user->given_name);
       $stmt->execute();
       $result = $stmt->rowCount();
       if ($result > 0) {
