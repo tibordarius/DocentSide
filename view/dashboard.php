@@ -1,5 +1,8 @@
 <?php
-
+require_once "../google/config.php";
+if (!isset($_SESSION["user_id"]) && $_SESSION["user_id"] == "") {
+  header("location:" . SITE_URL);
+  exit();}
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +41,7 @@
             <li><a href="#">Dashboard</a></li>
             <li><a href="#">Settings</a></li>
             <li><a href="#">Profile</a></li>
-            <li><a href="../google/logout.php">Sign Out</a></li>
+            <li><a href="../signout.php">Sign Out</a></li>
           </ul>
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">

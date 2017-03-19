@@ -13,7 +13,7 @@
 	<package>net.manuellemos.oauth</package>
 
 	<version>@(#) $Id: oauth_client.php,v 1.108 2014/06/12 10:58:53 mlemos Exp $</version>
-	<copyright>Copyright © (C) Manuel Lemos 2012</copyright>
+	<copyright>Copyright Â© (C) Manuel Lemos 2012</copyright>
 	<title>OAuth client</title>
 	<author>Manuel Lemos</author>
 	<authoraddress>mlemos-at-acm.org</authoraddress>

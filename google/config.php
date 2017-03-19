@@ -4,6 +4,8 @@ error_reporting(E_ALL & ~E_DEPRECATED & ~E_NOTICE);
 ob_start();
 session_start();
 
+define('PROJECT_NAME', 'IJburg College');
+
 define('DB_DRIVER', 'mysql');
 define('DB_SERVER', 'oege.ie.hva.nl');
 define('DB_SERVER_USERNAME', 'artsn001');
@@ -26,7 +28,7 @@ try {
 /* make sure the url end with a trailing slash */
 define("SITE_URL", "http://oege.ie.hva.nl/~artsn001/");
 /* the page where you will be redirected for authorzation */
-define("REDIRECT_URL", SITE_URL."view/dashboard.php");
+define("REDIRECT_URL", SITE_URL."google/login.php");
 
 /* * ***** Google related activities start ** */
 define("CLIENT_ID", "386290369432-apops34elv931sovs3demr1r8dmprru1.apps.googleusercontent.com"); 
@@ -39,6 +41,6 @@ define("SCOPE", 'https://www.googleapis.com/auth/userinfo.email '.
 
 
 /* logout both from google and your site **/
-define("LOGOUT_URL", "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=". urlencode(SITE_URL."logout.php"));
+define("LOGOUT_URL", "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=". urlencode(SITE_URL."google/logout.php"));
 /* * ***** Google related activities end ** */
 ?>

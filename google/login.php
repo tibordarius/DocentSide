@@ -15,7 +15,6 @@ $client = new oauth_client_class;
 // set the offline access only if you need to call an API
 // when the user is not present and the token may expire
 $client->offline = FALSE;
-
 $client->debug = false;
 $client->debug_http = true;
 $client->redirect_uri = REDIRECT_URL;
@@ -69,7 +68,7 @@ if ($success) {
       $sql = "INSERT INTO `google_users` (`name`, `email`) VALUES " . "( :name, :email)";
       $stmt = $DB->prepare($sql);
       $stmt->bindValue(":name", $user->name);
-      $stmt->bindValue(":email", $user->email);
+      $stmt->bindValue(":email", $user->email);  
       $stmt->execute();
       $result = $stmt->rowCount();
       if ($result > 0) {
@@ -87,6 +86,6 @@ if ($success) {
 } else {
   $_SESSION["e_msg"] = $client->error;
 }
-header("location:" . SITE_URL . "/view/dashboard.php");
+header("location:" . SITE_URL . "index.php");
 exit;
 ?>
