@@ -1,0 +1,80 @@
+.cc-selector input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+.badge1{background:url(http://www.bijdevaatemakelaardij.nl/wp-content/themes/ridizain/images/search-icon.png);}
+.mastercard{background-image:url(http://i.imgur.com/SJbRQF7.png);}
+
+.cc-selector input:active +.drinkcard-cc{opacity: .9;}
+.cc-selector input:checked +.drinkcard-cc{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+            opacity: 1 !important; display: block;
+}
+.drinkcard-cc{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:100px;height:70px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+}
+.drinkcard-cc:hover{
+    -webkit-filter: brightness(1.2) grayscale(.8) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.8) opacity(.9);
+            filter: brightness(1.2) grayscale(.8) opacity(.9);
+}
+
+/* Dropdown Button----------------------------------------------------------- */
+/*o.v.*/
+
+#image-dropdown {
+    /*style the "box" in its minimzed state*/
+    border:1px solid black; width:200px; height:50px; overflow:hidden;
+    /*animate collapsing the dropdown from open to closed state (v. fast)*/
+    -moz-transition: height 0.1s; 
+    -webkit-transition: height 0.1s; 
+    -ms-transition: height 0.1s;  
+    -o-transition: height 0.1s;  
+    transition: height 0.1s;
+}
+#image-dropdown:hover {
+    /*when expanded, the dropdown will get native means of scrolling*/
+    height:200px; overflow-y:scroll;
+    /*nice and smooth expand - speed this up at your preference or remove animation altogether*/
+    -moz-transition: height 0.5s; 
+    -webkit-transition: height 0.5s; 
+    -ms-transition: height 0.5s;  
+    -o-transition: height 0.5s;  
+    transition: height 0.5s;
+}
+#image-dropdown input {
+    /*hide the nasty default radio buttons. like, completely!*/
+    position:absolute;top:0;left:0;opacity:0;
+}
+
+
+#image-dropdown label {
+    /*style the labels to look like dropdown options, kinda*/
+    display:none; margin:2px; height:46px; opacity:0.2; 
+}
+
+#image-dropdown:hover label{
+    /*this is how labels render in the "expanded" state. we want to see only the selected radio button in the collapsed menu, and all of them when expanded*/
+    display:block;
+}
+#image-dropdown label:hover {
+    opacity:0.5;
+}
+#image-dropdown input:checked + label {
+    /*tricky! labels immediately following a checked radio button (with our markup they are semantically related) should be fully opaque regardless of hover, and they should always be visible (i.e. even in the collapsed menu*/
+    opacity:1 !important; display:block;
+}
+
+/*pfft, nothing as cool here, just the value trace*/
+#trace {margin:0 0 20px;}
