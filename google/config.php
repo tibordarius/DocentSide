@@ -9,7 +9,7 @@ define('PROJECT_NAME', 'IJburg College');
 define('DB_DRIVER', 'mysql');
 define('DB_SERVER', 'oege.ie.hva.nl');
 define('DB_SERVER_USERNAME', 'artsn001');
-define('DB_SERVER_PASSWORD', '7L1fsVAUG5KngR');
+define('DB_SERVER_PASSWORD', 'Tq4xAdrBiFY/mP');
 define('DB_DATABASE', 'zartsn001');
 
 $dboptions = array(
