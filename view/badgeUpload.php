@@ -3,9 +3,8 @@
         if (!isset($_SESSION["user_id"]) && $_SESSION["user_id"] == "") {
             header("location:" . SITE_URL);
         exit();}
-    include './header.php';
 ?>
-
+<div class ="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 <?php
 $target_dir = "badgeUploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -49,6 +48,7 @@ if ($uploadOk == 0) {
     }
 }
 ?>
+</div>
 
 <html>
     <body>
